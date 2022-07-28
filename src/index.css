@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+/* custom colors  */
+
+body {
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8fafa;
+  font-weight: 400;
+  line-height: 22px;
+  color:#212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bgcolor: #f8fafa;
+  --primary-color: #f28022;
+  --text-color: #212529;
+  --main-text-color: #212529;
+}
+
+a {
+  text-decoration: none !important;
+  color: #212529 !important;
+}
+a:hover {
+  color: #f28022 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333333;
+}
+
+
+h1 {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 43px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 33px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (min-width: 1200px){
+.css-1oqqzyl-MuiContainer-root {
+    max-width: 1280px !important;
+}
+}
+.section {
+  padding: 80px 0;
+}
+
+.btn {
+  color: #fff !important;
+  background: #f28022 !important;
+  border: 1px solid #f28022 !important;
+  padding: 12px 24px !important;
+  border-radius: 3px !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  text-transform: capitalize !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.btn:hover {
+  color: #f28022 !important;
+  background: #f2802200 !important;
+  border: 1px solid #f28022 !important;
+  padding: 12px 24px !important;
+  border-radius: 3px !important;
+  font-size: 16px !important;
+  line-height: 16px !important;
+  text-transform: capitalize !important;
+}
+
+@media (min-width: 1200px) {
+.css-1oqqzyl-MuiContainer-root {
+    max-width: 1200px !important;
+}
+}
+/* banner section start here */
+
+.banner-section {
+  background: url('/public/img/coviswift-banner.jpg') center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display:flex;
+  align-items: center;
+}
+
+.banner-text {
+  margin: 40px 30px 0px 0px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .banner-section {
+    background: url('/public/img/coviswift-mobile-banner.jpg') center center no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display:flex;
+  align-items: flex-start;
+  padding: 40px 0px;
+  }
+
+  .banner-section h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .banner-section .btn {
+    padding: 10px 12px !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+  }
+}
+
+/* about section start here */
+.about-section {
+  background: #f5f5f5;
+}
+
+/* feature section start here */
+
+.features-section .feature-box-row-1 {
+  padding: 40px;
+  height: 360px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 50px;
+}
+
+.features-section .feature-box-row-2 {
+  padding: 40px;
+  height: 550px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 50px;
+}
+
+.features-section .feature-box-content {
+
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+/* delivers section start here */
+.delivers-section {
+  background: #f5f5f5;
+}
+
+.list-section li {
+  padding: 3px 0px;
+  align-items: flex-start;
+}
+
+.list-section .list-text span{
+  font-family: "Poppins", sans-serif;
+  padding-left: 10px;
+}
+
+.list-section svg {
+  font-size: 22px;
+  margin-top: 5px;
+  fill:#f28022;
+
+}
+
+/* table section start here */
+.table-section {
+  background: #f5f5f5;
+  padding-bottom: 80px;
+}
+
+.table-section th, tr, td {
+  border: 1px solid #000;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px;
+  text-align: center !important;
+  background: #fff;
+}
+
+.table-section  td {
+  border-bottom:1px solid #000;
+}
+
+.table-section .table-heading {
+ font-weight: 600;
+}
+
+/* form section start here */
+.form-section input, label {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px;
+}
+
+.contact-img-box {
+  padding: 40px;
+  height: 500px;
+  display:flex;
+  flex-direction: column;
+  border-radius: 50px;
+}
+
+.contact-img-text li {
+  padding: 3px 0px;
+  align-items: flex-start;
+}
+
+.contact-img-text .list-text span{
+  font-family: "Poppins", sans-serif;
+  padding-left: 10px;
+}
+
+.contact-img-text svg {
+  font-size: 22px;
+  margin-top: 5px;
+
+}
+
+/* footer section start here */
+.footer-section {
+  background: #f5f5f5;
+  border-top: 1px solid #DADCEB;
+}
+
+.footer-heading {
+  color: #f28022;
+  letter-spacing: 1.2px;
+}
+
+.footer-disclaimer-text {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 22px !important;
+}
+
+.footer-bottom {
+  padding: 40px 0px;
+  border-top: 1px solid #DADCEB;
+}
+
+/* download button style */
+.buttonDownload {
+	display: inline-block;
+	position: relative;
+	padding: 8px 20px;
+	background-color: #f28022;
+  border-radius: 3px;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	text-decoration: none;
+	font-size:12px;
+	text-align: center;
+	text-indent: 15px;
+}
+
+.buttonDownload:hover {
+	background-color: #333;
+	color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 52%;
+}
+
+/* Download box shape  */
+.buttonDownload:before {
+	width: 10px;
+	height: 2px;
+	border-style: solid;
+	border-width: 0 2px 2px;
+}
+
+/* Download arrow shape */
+.buttonDownload:after {
+	width: 0;
+	height: 0;
+	margin-left: 3px;
+	margin-top: -7px;
+	border-style: solid;
+	border-width: 4px 4px 0 4px;
+	border-color: transparent;
+	border-top-color: inherit;
+	animation: downloadArrow 2s linear infinite;
+	animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+	border-color: #f28022;
+}
+
+.buttonDownload:hover:after {
+	border-top-color: #f28022;
+	animation-play-state: running;
+}
+
+/* keyframes for the download icon anim */
+@keyframes downloadArrow {
+	/* 0% and 0.001% keyframes used as a hackish way of having the button frozen on a nice looking frame by default */
+	0% {
+		margin-top: -7px;
+		opacity: 1;
+	}
+
+	0.001% {
+		margin-top: -15px;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		margin-top: 0;
+		opacity: 0;
+	}
+}
