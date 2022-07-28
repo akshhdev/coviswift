@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/coviswift/static/css/main.93b9f92a.css",
+    "main.js": "/coviswift/static/js/main.10bcc925.js",
+    "static/js/787.d5213485.chunk.js": "/coviswift/static/js/787.d5213485.chunk.js",
+    "static/media/coviswift-mobile-banner.jpg": "/coviswift/static/media/coviswift-mobile-banner.6ac8d14de5496ee4fd4f.jpg",
+    "static/media/coviswift-banner.jpg": "/coviswift/static/media/coviswift-banner.b931b4e74f3c68e717b2.jpg",
+    "static/media/CoviSwift2.svg": "/coviswift/static/media/CoviSwift2.59f8246318f71c93c1609b7a0b3090bd.svg",
+    "index.html": "/coviswift/index.html",
+    "main.93b9f92a.css.map": "/coviswift/static/css/main.93b9f92a.css.map",
+    "main.10bcc925.js.map": "/coviswift/static/js/main.10bcc925.js.map",
+    "787.d5213485.chunk.js.map": "/coviswift/static/js/787.d5213485.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93b9f92a.css",
+    "static/js/main.10bcc925.js"
+  ]
+}
