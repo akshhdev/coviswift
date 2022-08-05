@@ -195,6 +195,13 @@ img {
   font-weight: 500;
 }
 
+.features-section .Swift-Assay {
+  background: url('../src/assets/images/Swift-Assay.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+
+
 /* delivers section start here */
 .delivers-section {
   background: #f5f5f5;

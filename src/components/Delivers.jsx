@@ -20,7 +20,7 @@ function Delivers() {
             <Grid item lg={5} xs={12}>
               <Box>
                 <img
-                  src="/img/coviswift-delivers.jpg"
+                  src={require("../assets/images/coviswift-delivers.jpg")}
                   alt="Coviswift Delivers"
                 />
               </Box>

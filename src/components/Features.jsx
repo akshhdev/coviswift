@@ -26,9 +26,9 @@ function Features() {
           <Grid container spacing={3}>
             <Grid item lg={4} xs={12} spacing={3}>
               <Box
-                className="feature-box-row-1"
+                className="feature-box-row-1 Swift-Assay"
                 style={{
-                  backgroundImage: "url('/img/Swift-Assay.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Swift-Assay.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -48,7 +48,7 @@ function Features() {
               <Box
                 className="feature-box-row-1"
                 style={{
-                  backgroundImage: "url('/img/Multi-Gene-Detection.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Multi-Gene-Detection.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -71,7 +71,7 @@ function Features() {
               <Box
                 className="feature-box-row-1"
                 style={{
-                  backgroundImage: "url('/img/Gold-Standard-Accuracy.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Gold-Standard-Accuracy.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -96,7 +96,7 @@ function Features() {
               <Box
                 className="feature-box-row-2"
                 style={{
-                  backgroundImage: "url('/img/Easy-Efficient-Transportation.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Easy-Efficient-Transportation.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -119,7 +119,7 @@ function Features() {
               <Box
                 className="feature-box-row-2"
                 style={{
-                  backgroundImage: "url('/img/Zero-Contamination.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Zero-Contamination.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
@@ -141,7 +141,7 @@ function Features() {
               <Box
                 className="feature-box-row-2"
                 style={{
-                  backgroundImage: "url('/img/Pipette-Free-Operation.jpg')",
+                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Pipette-Free-Operation.jpg'})`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",

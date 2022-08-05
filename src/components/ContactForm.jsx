@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   Grid,
@@ -13,7 +13,31 @@ import {
 } from "@mui/material";
 import DownloadingIcon from "@mui/icons-material/Downloading";
 
-export default function ContactForm() {
+
+
+const ContactForm = () => {
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, number, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      number: number.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:3001", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
   return (
     <>
       <Grid className="form-section section">
@@ -35,26 +59,26 @@ export default function ContactForm() {
               <Box
                 className="contact-img-box"
                 style={{
-                  backgroundImage: "url('/img/contact-image.jpg')",
+                  backgroundImage: `url(${
+                    process.env.PUBLIC_URL + "/img/contact-image.jpg"
+                  })`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                 }}
               >
                 <Typography>
-                 
                   <List className="contact-img-text">
-                  <a href="/img/coviswift-brochure.pdf" download>
-                    <ListItem>
-                    <DownloadingIcon />
-                      <ListItemText
-                        className="list-text"
-                        primary="Download Brochure"
-                      />
-                    </ListItem>
+                    <a href="/img/coviswift-brochure.pdf" download>
+                      <ListItem>
+                        <DownloadingIcon />
+                        <ListItemText
+                          className="list-text"
+                          primary="Download Brochure"
+                        />
+                      </ListItem>
                     </a>
                   </List>
-                  
                 </Typography>
               </Box>
             </Grid>
@@ -63,83 +87,79 @@ export default function ContactForm() {
               <Box style={{ marginLeft: "10px" }}>
                 <h3>Get In Touch</h3>
               </Box>
+              <form onSubmit={handleSubmit}>
+                <Grid container spacing={0}>
+                  <Grid item lg={12} xs={12}>
+                    <Box style={{ margin: "10px" }}>
+                      <TextField
+                        label="Name"
+                        placeholder="Name"
+                        variant="outlined"
+                        fullWidth
+                        name="name"
+                        id="name"
+                      />
+                    </Box>
+                  </Grid>
 
-              <Grid container spacing={0}>
-                
-                <Grid item lg={12} xs={12}>
-                  <Box style={{ margin: "10px" }}>
-                    <TextField
-                      label="Name"
-                      placeholder="Name"
-                      variant="outlined"
-                      fullWidth
-                      name="name"
-                    />
-                  </Box>
+                  <Grid item lg={12} xs={12}>
+                    <Box style={{ margin: "10px" }}>
+                      <TextField
+                        type="email"
+                        label="Email"
+                        placeholder="Email"
+                        variant="outlined"
+                        id="email"
+                        name="email"
+                        fullWidth
+                      />
+                    </Box>
+                  </Grid>
+
+                  <Grid item lg={12} xs={12}>
+                    <Box style={{ margin: "10px" }}>
+                      <TextField
+                        type="tel"
+                        label="Number"
+                        placeholder="Number"
+                        variant="outlined"
+                        id="number"
+                        name="number"
+                        fullWidth
+                      />
+                    </Box>
+                  </Grid>
+
+                  <Grid item lg={12} xs={12}>
+                    <Box style={{ margin: "10px" }}>
+                      <TextField
+                        label="Message"
+                        placeholder="Message"
+                        variant="outlined"
+                        id="message"
+                        name="message"
+                        multiline
+                        rows={4}
+                        fullWidth
+                      />
+                    </Box>
+                  </Grid>
+
+                  <Grid item lg={12} xs={12}>
+                    <Box style={{ margin: "10px" }}>
+                      <Button type="submit" href="/" className="btn">
+                      {status}
+                      </Button>
+                    </Box>
+                  </Grid>
                 </Grid>
-
-                <Grid item lg={12} xs={12}>
-                  <Box style={{ margin: "10px" }}>
-                    <TextField
-                      type="email"
-                      label="Email"
-                      placeholder="Email"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Box>
-                </Grid>
-
-                <Grid item lg={12} xs={12}>
-                  <Box style={{ margin: "10px" }}>
-                    <TextField
-                      type="tel"
-                      label="Number"
-                      placeholder="Number"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Box>
-                </Grid>
-
-                {/* <Grid item lg={6} xs={12}>
-                  <Box style={{margin:'10px'}}>
-                    <TextField
-                      type="subject"
-                      label="Subject"
-                      placeholder="Subject"
-                      variant="outlined"
-                      fullWidth
-                    />
-                  </Box>
-                </Grid> */}
-
-                <Grid item lg={12} xs={12}>
-                  <Box style={{ margin: "10px" }}>
-                    <TextField
-                      label="Message"
-                      placeholder="Message"
-                      variant="outlined"
-                      multiline
-                      rows={4}
-                      fullWidth
-                    />
-                  </Box>
-                </Grid>
-
-                <Grid item lg={12} xs={12}>
-                  <Box style={{ margin: "10px" }}>
-                    <Button href="/" className="btn">
-                      Submit
-                    </Button>
-                  </Box>
-                </Grid>
-               
-              </Grid>
+              </form>
             </Grid>
           </Grid>
         </Container>
       </Grid>
     </>
   );
-}
+};
+
+export default ContactForm;
