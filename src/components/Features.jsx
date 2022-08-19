@@ -28,7 +28,7 @@ function Features() {
               <Box
                 className="feature-box-row-1 Swift-Assay"
                 style={{
-                  backgroundImage: `url(${process.env.PUBLIC_URL + '/img/Swift-Assay.jpg'})`,
+                  backgroundImage: `url('/coviswift/img/Swift-Assay.jpg')`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
